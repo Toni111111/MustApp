@@ -19,7 +19,7 @@ public class PosterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_poster);
 
         fragmentManager = getSupportFragmentManager();
-        fragmentClass = InfoFragment.class;
+        fragmentClass = PosterFragment.class;
 
         try {
             fragment = (Fragment) fragmentClass.newInstance();
