@@ -1,26 +1,27 @@
 package com.example.tony.mustapp.view;
 
+
+import android.annotation.TargetApi;
 import android.content.Context;
-import android.support.transition.ChangeBounds;
-import android.support.transition.ChangeImageTransform;
-import android.support.transition.ChangeTransform;
-import android.support.transition.TransitionSet;
+import android.os.Build;
+import android.transition.ChangeBounds;
+import android.transition.ChangeImageTransform;
+import android.transition.ChangeTransform;
+import android.transition.TransitionSet;
 import android.util.AttributeSet;
+
+import android.view.ViewGroup;
 
 import static android.support.transition.TransitionSet.ORDERING_TOGETHER;
 
-/**
- * Created by Asus on 06.11.2017.
- */
-
+@TargetApi(Build.VERSION_CODES.LOLLIPOP)
 public class InfoTransition extends TransitionSet {
+
     public InfoTransition() {
         init();
     }
 
-    /**
-     * This constructor allows us to use this transition in XML
-     */
+
     public InfoTransition(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
@@ -32,5 +33,6 @@ public class InfoTransition extends TransitionSet {
                 addTransition(new ChangeTransform()).
                 addTransition(new ChangeImageTransform());
     }
-}
 
+
+}

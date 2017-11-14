@@ -18,6 +18,7 @@ public class PosterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_poster);
 
+        /*
         fragmentManager = getSupportFragmentManager();
         fragmentClass = PosterFragment.class;
 
@@ -30,7 +31,12 @@ public class PosterActivity extends AppCompatActivity {
         }
         fragmentManager.beginTransaction().add(R.id.container, fragment).commit();
 
+*/
 
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.container, new PosterFragment())
+                .commit();
 
     }
 }
